@@ -26,7 +26,7 @@ export default function Alunos() {
           <div key={String(aluno.id)}>
             <ProfilePicture>
               {get(aluno, 'Fotos[0].url', false) ? (
-                <img src={aluno.Fotos[0].url} alt='fotos' />
+                <img src={aluno.Fotos[0].url} alt="fotos" />
               ) : (
                 <FaUserCircle size={36} />
               )}
@@ -34,10 +34,10 @@ export default function Alunos() {
 
             <span>{aluno.nome}</span>
             <span>{aluno.email}</span>
-            <Link to={`/aluno${aluno.id}/edit`}>
+            <Link to={`/aluno/${aluno.id}/edit`}>
               <FaEdit size={16} />
             </Link>
-            <Link to={`/aluno${aluno.id}/delete`}>
+            <Link to={`/aluno/${aluno.id}/delete`}>
               <FaWindowClose size={16} />
             </Link>
           </div>

@@ -24,9 +24,9 @@ export default function Register() {
     }
     if (!isEmail(email)) {
       formErrors = true;
-      toast.error('E-email inválido.');
+      toast.error('E-mail inválido.');
     }
-    if (password.length < 3 || password.length > 50) {
+    if (password.length < 6 || password.length > 50) {
       formErrors = true;
       toast.error('Senha deve ter entre 3 e 50 caracteres.');
     }
@@ -51,36 +51,26 @@ export default function Register() {
       <h1>Crie sua conta</h1>
 
       <Form onSubmit={handleSubmit}>
-        <label htmlFor='nome'>
+        <label htmlFor="nome">
           Nome
-          <input
-            type='text'
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            placeholder='Seu nome'
-          />
+          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome" />
         </label>
 
-        <label htmlFor='email'>
+        <label htmlFor="email">
           E-mail
-          <input
-            type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder='Seu e-mail'
-          />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Seu e-mail" />
         </label>
 
-        <label htmlFor='password'>
+        <label htmlFor="password">
           Senha
           <input
-            type='password'
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder='Sua senha'
+            placeholder="Sua senha"
           />
         </label>
-        <button type='submit'>Criar minha conta</button>
+        <button type="submit">Criar minha conta</button>
       </Form>
     </Container>
   );
