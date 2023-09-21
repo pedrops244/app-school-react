@@ -3,9 +3,12 @@ export const BOTAO_CLICADO_SUCESS = 'BOTAO_CLICADO_SUCESS';
 export const BOTAO_CLICADO_REQUEST = 'BOTAO_CLICADO_REQUEST';
 export const BOTAO_CLICADO_FAILURE = 'BOTAO_CLICADO_FAILURE';
 
-// Types from auth
+// Types from LOGIN
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCESS = 'LOGIN_SUCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+
+// Types from REGISTER
+export const REGISTER_REQUEST = 'REGISTER_REQUEST';
 
 export const PERSIST_REHYDRATE = 'persist/REHYDRATE';
