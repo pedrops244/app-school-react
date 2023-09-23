@@ -8,7 +8,7 @@ export function loginRequest(payload) {
 }
 export function loginSuccess(payload) {
   return {
-    type: types.LOGIN_SUCESS,
+    type: types.LOGIN_SUCCESS,
     payload,
   };
 }
@@ -22,6 +22,24 @@ export function loginFailure(payload) {
 export function registerRequest(payload) {
   return {
     type: types.REGISTER_REQUEST,
+    payload,
+  };
+}
+export function registerUpdatedsuccess(payload) {
+  return {
+    type: types.REGISTER_UPDATED_SUCCESS,
+    payload,
+  };
+}
+export function registerCreatedSucess(payload) {
+  return {
+    type: types.REGISTER_CREATED_SUCCESS,
+    payload,
+  };
+}
+export function registerFailure(payload) {
+  return {
+    type: types.REGISTER_FAILURE,
     payload,
   };
 }
