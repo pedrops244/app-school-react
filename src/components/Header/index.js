@@ -10,6 +10,7 @@ import { Nav } from './styled';
 export default function Header() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const name = useSelector((state) => state.auth.user.nome);
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(actions.loginFailure());
@@ -17,22 +18,25 @@ export default function Header() {
   };
   return (
     <Nav>
-      <Link to="/">
-        <FaHome size={24} />
-      </Link>
-      <Link to="/register">
-        <FaUserAlt size={22} />
-      </Link>
-
-      {isLoggedIn ? (
-        <Link onClick={handleLogout} to="/logout">
-          <FaSignInAlt size={24} />
+      <h1>Olá, {name}</h1>
+      <div>
+        <Link to="/">
+          <FaHome size={24} />
         </Link>
-      ) : (
-        <Link to="/login">
+        <Link to="/register">
           <FaRegistered size={24} />
         </Link>
-      )}
+
+        {isLoggedIn ? (
+          <Link onClick={handleLogout} to="/logout">
+            <FaSignInAlt size={24} />
+          </Link>
+        ) : (
+          <Link to="/login">
+            <FaUserAlt size={22} />
+          </Link>
+        )}
+      </div>
     </Nav>
   );
 }

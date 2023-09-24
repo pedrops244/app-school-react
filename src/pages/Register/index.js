@@ -40,7 +40,7 @@ export default function Register() {
     }
     if ((!id && password.length < 6) || password.length > 50) {
       formErrors = true;
-      toast.error('Senha deve ter entre 3 e 50 caracteres.');
+      toast.error('Senha deve ter entre 6 e 50 caracteres.');
     }
 
     if (formErrors) return;

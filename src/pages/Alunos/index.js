@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { get } from 'lodash';
-import { FaUserCircle, FaEdit, FaWindowClose, FaExclamation } from 'react-icons/fa';
+import { FaUserCircle, FaEdit, FaWindowClose, FaCheck } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import history from '../../services/history';
 
@@ -26,8 +26,8 @@ export default function Alunos() {
   }, []);
   const handleDeleteAsk = (e) => {
     e.preventDefault();
-    const exclamation = e.currentTarget.nextSibling;
-    exclamation.setAttribute('display', 'block');
+    const iconCheck = e.currentTarget.nextSibling;
+    iconCheck.setAttribute('display', 'block');
     e.currentTarget.remove();
   };
 
@@ -45,7 +45,7 @@ export default function Alunos() {
       if (status === 401) {
         toast.error('Você precisa fazer login!');
       } else {
-        toast.error('Ocorreu um erro ao exlcuir aluno.');
+        toast.error('Ocorreu um erro ao excluir o aluno.');
       }
       setIsLoading(false);
     }
@@ -75,7 +75,8 @@ export default function Alunos() {
               <FaWindowClose size={16} />
             </Link>
 
-            <FaExclamation
+            <FaCheck
+              color="green"
               size={16}
               display="none"
               cursor="pointer"
