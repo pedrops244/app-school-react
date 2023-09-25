@@ -6,7 +6,13 @@ export const Nav = styled.nav`
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 55px;
+
+  .empty-div {
+    display: none;
+  }
+
   a {
     color: #fff;
     margin: 0 10px 0;

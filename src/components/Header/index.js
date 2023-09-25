@@ -18,7 +18,7 @@ export default function Header() {
   };
   return (
     <Nav>
-      {isLoggedIn ? <h1>Olá, {name}</h1> : <div />}
+      {isLoggedIn ? <h1>Olá, {name}</h1> : <div className="empty-div" />}
       <div>
         <Link to="/">
           <FaHome size={24} />
