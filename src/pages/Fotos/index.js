@@ -64,7 +64,7 @@ export default function Fotos({ match }) {
   return (
     <Container>
       <Loading isLoading={isLoading} />
-      <h1>Fotos</h1>
+      <h1>Foto</h1>
       <Form>
         <label htmlFor="foto">
           {foto ? <img src={foto} alt="Foto" /> : 'Selecionar'}

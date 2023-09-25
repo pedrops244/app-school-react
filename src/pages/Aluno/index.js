@@ -82,7 +82,7 @@ export default function Aluno({ match }) {
     }
     if (!isFloat(String(altura))) {
       formErrors = true;
-      toast.error('Peso inválido.');
+      toast.error('Altura inválida.');
     }
     if (formErrors) return;
 

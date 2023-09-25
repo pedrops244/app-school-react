@@ -37,6 +37,7 @@ export const ProfilePicture = styled.div`
     width: 180px;
     height: 180px;
     border-radius: 50%;
+    border: 3px solid ${colors.primaryColor};
   }
 
   a {
