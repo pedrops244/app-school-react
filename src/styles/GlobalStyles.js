@@ -51,4 +51,10 @@ export const Container = styled.section`
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .aluno-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

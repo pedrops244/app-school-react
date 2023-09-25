@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FaUserPlus, FaUserCircle, FaEdit, FaWindowClose, FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { get } from 'lodash';
-import { FaUserCircle, FaEdit, FaWindowClose, FaCheck } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import history from '../../services/history';
 
@@ -44,20 +44,22 @@ export default function Alunos() {
       const status = get(err, 'response.status', []);
       if (status === 401) {
         toast.error('Você precisa fazer login!');
+        history.push('/login');
       } else {
         toast.error('Ocorreu um erro ao excluir o aluno.');
       }
       setIsLoading(false);
     }
   };
-
   return (
     <Container>
       <Loading isLoading={isLoading} />
-
-      <h1>Alunos</h1>
-      <NovoAluno to="/aluno/">Novo aluno</NovoAluno>
-
+      <div className="aluno-header">
+        <h1>Alunos</h1>
+        <NovoAluno to="/aluno/">
+          <FaUserPlus size={30} />
+        </NovoAluno>
+      </div>
       <AlunoContainer>
         {alunos.map((aluno, index) => (
           <div key={String(aluno.id)}>
