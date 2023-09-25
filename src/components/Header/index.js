@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaSignInAlt, FaUserAlt, FaRegistered } from 'react-icons/fa';
+import { FaHome, FaSignInAlt, FaUserAlt, FaRegistered, FaIdBadge } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -23,9 +23,15 @@ export default function Header() {
         <Link to="/">
           <FaHome size={24} />
         </Link>
-        <Link to="/register">
-          <FaRegistered size={24} />
-        </Link>
+        {isLoggedIn ? (
+          <Link to="/register">
+            <FaIdBadge size={22} />
+          </Link>
+        ) : (
+          <Link to="/register">
+            <FaRegistered size={24} />
+          </Link>
+        )}
 
         {isLoggedIn ? (
           <Link onClick={handleLogout} to="/logout">
