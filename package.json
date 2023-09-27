@@ -2,7 +2,6 @@
   "name": "react-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://35.199.107.152",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -27,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "homepage": "http://35.199.107.152",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
