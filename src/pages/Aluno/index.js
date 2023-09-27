@@ -143,7 +143,7 @@ export default function Aluno({ match }) {
       )}
       <Form onSubmit={handleSubmit}>
         <label htmlFor="nome">
-          Nome
+          Nome:
           <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome" />
         </label>
         <label htmlFor="sobrenome">
