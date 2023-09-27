@@ -1,6 +1,7 @@
 {
   "name": "react-template",
   "version": "0.1.0",
+  "private": true,
   "homepage": "http://35.199.107.152/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
