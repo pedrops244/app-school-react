@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import * as colors from '../../config/colors';
 
 export const Form = styled.form`
@@ -24,4 +25,11 @@ export const Form = styled.form`
       border: 1px solid ${colors.primaryColor};
     }
   }
+`;
+export const CreateAccount = styled(Link)`
+  display: flex;
+  color: ${colors.primaryColor};
+  font-weight: 700;
+  justify-content: center;
+  margin-top: 20px;
 `;

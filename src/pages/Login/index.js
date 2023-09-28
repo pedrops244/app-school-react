@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { get } from 'lodash';
 
 import { Container } from '../../styles/GlobalStyles';
-import { Form } from './styled';
+import { Form, CreateAccount } from './styled';
 import * as actions from '../../store/modules/auth/actions';
 import Loading from '../../components/Loading';
 
@@ -55,6 +55,7 @@ export default function Login(props) {
           />
         </label>
         <button type="submit">Acessar</button>
+        <CreateAccount to="/register">Criar conta</CreateAccount>
       </Form>
     </Container>
   );
