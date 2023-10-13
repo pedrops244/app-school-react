@@ -2,6 +2,8 @@
   
 ## App-School
 Application created to simulate a real school.
+## Deploy
+- http://35.199.107.152:82/login
 
 ## Functionalities
 - User login and registration system on different routes.
@@ -13,6 +15,7 @@ Application created to simulate a real school.
 
 ## Technologies used
 - **Frontend:** React, Javascript
+- **Stylization:** styled-components
 - **Backend:** Node.js, Express.js
 - **DataBase:** MariaDB 
 </div>
@@ -31,6 +34,9 @@ Aplicativo criado para simular uma escola real.
 
 ## Tecnologias utilizadas
 - **Frontend:** React, Javascript
+- **Estilização:** styled-components
 - **Back-end:** Node.js, Express.js
 - **Banco de dados:** MariaDB
 </div>
+
+
